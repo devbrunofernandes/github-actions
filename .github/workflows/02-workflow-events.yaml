@@ -1,10 +1,12 @@
 name: 02 - Workflow Events
-on: push
+
+on: 
+  push
 
 jobs:
-  name: echo
-  runs-on: ubuntu-latest
-  steps:
-  - name: Show the trigger
-    run: |
-      echo "Event name: ${{ github.event_name }}"
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show the trigger
+      run: |
+        echo "Event name: ${{ github.event_name }}"
