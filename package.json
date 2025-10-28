@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-app": "file:04-using-actions/react-app"
+  }
+}
