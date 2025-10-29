@@ -1,0 +1,9 @@
+name: 05 - 1 - Event Filters and Activity Types
+on:
+    pull_request:
+        activities: [opened, synchronize]
+        branchs:
+            - main
+jobs:
+    echo:
+        runs: echo Running whenever a PR is opened or synchronized AND base branch is main
