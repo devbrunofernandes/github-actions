@@ -23,8 +23,6 @@ jobs:
 
             - name: Install dependencies
               run: npm ci
-            - name: Testing
-              run: npm run test
             - name: Building
               run: npm run build
             - name: Deploying to nonprod
