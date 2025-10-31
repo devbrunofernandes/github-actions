@@ -35,8 +35,5 @@ jobs:
         steps:
             - name: Deploy
               run: echo "Deploying"
-<<<<<<< HEAD
-=======
             - name: Print Outputs
               run: echo ${{ needs.build.outputs.output1 }}
->>>>>>> 59f9743f (Testing overwrite output file at 12)
