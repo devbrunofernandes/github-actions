@@ -14,9 +14,9 @@ jobs:
                 include:
                     - node: 16.x
                       os: ubuntu-latest
-                    - tag: experimental
-                      node: 21.x
+                    - node: 21.x
                       os: ubuntu-latest
+                      tag: experimental
             fail-fast: false
         steps:
             - name: Setup node
