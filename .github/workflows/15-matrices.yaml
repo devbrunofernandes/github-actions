@@ -41,7 +41,7 @@ jobs:
           size: [small, large]
           include:
             - opacity: 0.50
-            - color: red
+              color: red
               shape: triangle
       name: ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}-${{ matrix.opacity }}
       steps:
