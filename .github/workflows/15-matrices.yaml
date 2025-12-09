@@ -47,8 +47,12 @@ jobs:
             - color: red
               shape: triangle
             - opacity: 0.50
+            - color: green
+              shape: circle
+              size: medium
           exclude:
-            - opacity: 0.75
+            - color: green
+              shape: circle
       name: ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}-${{ matrix.opacity }}
       steps:
         - name: Dummy step
