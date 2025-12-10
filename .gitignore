@@ -1,0 +1,2 @@
+# to NOT ignore
+!.github/actions/**/node_modules
