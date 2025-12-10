@@ -30,5 +30,4 @@ runs:
       if: steps.cache.outputs.cache-hit != 'true'
       working-directory: ${{ inputs.working-dir }}
       shell: bash
-      run: |
-        if [ "${{ inputs.target-env }}" = "dev"]; then npm ci; else npm ci --omit=dev; fi
+      run: ${{ inputs.target-env == 'dev' && 'npm ci' || 'npm ci --omit=dev' }}
