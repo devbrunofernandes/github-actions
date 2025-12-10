@@ -31,4 +31,4 @@ runs:
       working-directory: ${{ inputs.working-dir }}
       shell: bash
       run: |
-        if [ "${{ inputs.target-env }}" = "prod"]; then npm ci; else npm ci --omit=dev; fi
+        if [ "${{ inputs.target-env }}" = "dev"]; then npm ci; else npm ci --omit=dev; fi
