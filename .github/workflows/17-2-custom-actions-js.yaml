@@ -10,7 +10,7 @@ on:
             target-branch:
                 type: string
                 description: The branch from which the PR is created
-                default: update-Dependencies
+                default: update-dependencies
                 required: false
             working-directory:
                 type: string

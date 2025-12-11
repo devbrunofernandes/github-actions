@@ -27,7 +27,7 @@ async function run() {
   const target_branch = core.getInput('target-branch');
   const working_directory = core.getInput('working-directory');
   const gh_token = core.getInput('gh-token');
-  const debug = core.getBooleanInput('debugs');
+  const debug = core.getBooleanInput('debug');
 
   core.setSecret(gh_token);
 
