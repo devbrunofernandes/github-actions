@@ -20,7 +20,7 @@ on:
                 type: boolean
                 description: Whether the output debug messages to the console.
                 required: false
-run-name: 17 - 2 - Custom Actions - JS
+run-name: 17 - 2 - Custom Actions - JS | BB - ${{ inputs.base-branch }} - TB - ${{ inputs.target-branch }} - WD - ${{ inputs.working-directory }}
 jobs:
     dependency-update:
         runs-on: ubuntu-latest
