@@ -80,7 +80,7 @@ async function run() {
       cwd: working_directory
     });
 
-    exec.exec('git commit -m "Updating dependencies node packages"', [], {
+    exec.exec('git commit -m', ['Updating dependencies node packages'], {
       cwd: working_directory
     });
 
