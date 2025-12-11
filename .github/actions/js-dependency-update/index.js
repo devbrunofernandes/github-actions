@@ -87,7 +87,7 @@ async function run() {
       cwd: working_directory
     });
 
-    await exec.exec(`git push -u origin ${target_branch}`, [], {
+    await exec.exec(`git push -u origin ${target_branch} --force`, [], {
       cwd: working_directory
     });
 
