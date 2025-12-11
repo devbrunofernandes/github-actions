@@ -72,19 +72,22 @@ async function run() {
   if (git_status_result.stdout.length > 0) {
     core.info('[js-dependency-update]: There are some updates avaliable.');
 
-    exec.exec(`git checkout -b ${target_branch}`, [], {
+    await exec.exec(`git config --global user.name "gh-automation"`);
+    await exec.exec(`git config --global user.email "gh-automation@email.com"`);
+
+    await exec.exec(`git checkout -b ${target_branch}`, [], {
       cwd: working_directory
     });
 
-    exec.exec('git add package.json package-lock.json', [], {
+    await exec.exec('git add package.json package-lock.json', [], {
       cwd: working_directory
     });
 
-    exec.exec('git commit -m \"Updating dependencies node packages\"', [], {
+    await exec.exec('git commit -m \"Updating dependencies node packages\"', [], {
       cwd: working_directory
     });
 
-    exec.exec(`git push -u origin ${target_branch}`, [], {
+    await exec.exec(`git push -u origin ${target_branch}`, [], {
       cwd: working_directory
     });
 
