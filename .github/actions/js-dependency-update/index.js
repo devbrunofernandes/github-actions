@@ -54,9 +54,9 @@ async function run() {
   }
 
   // print the values in the screen
-  core.info(`[js-dependency-update] : base branch is ${baseBranch}`);
-  core.info(`[js-dependency-update] : target branch is ${targetBranch}`);
-  core.info(`[js-dependency-update] : working directory is ${workingDir}`);
+  core.info(`[js-dependency-update] : base branch is ${base_branch}`);
+  core.info(`[js-dependency-update] : target branch is ${target_branch}`);
+  core.info(`[js-dependency-update] : working directory is ${working_directory}`);
 
   // executing commands in shell
   await exec.exec('npm update', [], {
