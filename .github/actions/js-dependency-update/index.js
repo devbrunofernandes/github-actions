@@ -32,14 +32,14 @@ async function run() {
   core.setSecret(gh_token);
 
   // validating
-  if (!validateBranchName({ branchName: baseBranch })) {
+  if (!validateBranchName({ branchName: base_branch })) {
     core.setFailed(
       'Invalid base-branch name. Branch names should include only characters, numbers, hyphens, underscores, dots, and forward slashes.'
     );
     return;
   }
 
-  if (!validateBranchName({ branchName: targetBranch })) {
+  if (!validateBranchName({ branchName: target_branch })) {
     core.setFailed(
       'Invalid target-branch name. Branch names should include only characters, numbers, hyphens, underscores, dots, and forward slashes.'
     );
