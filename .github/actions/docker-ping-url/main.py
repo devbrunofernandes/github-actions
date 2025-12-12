@@ -1,5 +1,6 @@
 import requests
 import time
+import os
 
 def ping_url(url, delay, max_trials):
     print(f'Starting connection to "{url}".')
@@ -18,9 +19,12 @@ def ping_url(url, delay, max_trials):
     return False
 
 def run():
-    url = INPUT_URL
-    max_trials = INPUT_MAX_TRIALS
-    delay = INPUT_DELAY
+    url = os.getenv(INPUT_URL) 
+    max_trials = os.getenv(INPUT_MAX_TRIALS)
+    delay = os.getenv(INPUT_DELAY)
+
+    if not url or not max_trials or not delay:
+        raise Exception('Missing core input variables (url, max_trials or delay).')
 
     is_health = ping_url(url, max_trials, delay)
     if not is_health:
