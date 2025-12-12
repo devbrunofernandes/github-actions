@@ -19,9 +19,9 @@ def ping_url(url, delay, max_trials):
     return False
 
 def run():
-    url = os.getenv(INPUT_URL) 
-    max_trials = os.getenv(INPUT_MAX_TRIALS)
-    delay = os.getenv(INPUT_DELAY)
+    url = os.getenv('INPUT_URL') 
+    max_trials = os.getenv('INPUT_MAX_TRIALS')
+    delay = os.getenv('INPUT_DELAY')
 
     if not url or not max_trials or not delay:
         raise Exception('Missing core input variables (url, max_trials or delay).')
