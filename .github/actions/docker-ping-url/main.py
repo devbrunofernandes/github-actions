@@ -8,7 +8,7 @@ def ping_url(url, delay, max_trials):
     while trials < max_trials:
         trials += 1
         response = requests.get(url=url)
-        response_code = response.raise_for_status()
+        response_code = response.status_code
         if response_code == 200:
             print(f'Sucessfully connect to URL {url}')
             return True
