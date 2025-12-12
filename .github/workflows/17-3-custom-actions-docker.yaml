@@ -3,8 +3,19 @@ on:
     workflow_dispatch:
         inputs:
             url:
-                type: string
-                default: 'https://www.google.com'
+                type: choice
+                options:
+                    - 'https://google.com'
+                    - 'https://testing.docker.url.fail'
+                required: true
+            max_trials:
+                type: number
+                default: 10
+                required: false
+            delay:
+                type: number
+                default: 5
+                required: false
 jobs:
     ping-url:
         runs-on: ubuntu-latest
@@ -15,3 +26,5 @@ jobs:
               uses: ./.github/actions/docker-ping-url
               with:
                 url: ${{ inputs.url }}
+                max_trials: ${{ inputs.max_trials }}
+                delay: ${{ inputs.delay }}
